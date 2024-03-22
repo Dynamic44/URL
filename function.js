@@ -1,4 +1,4 @@
-window.function = function(sku) {
+window.function = async function(sku) {
   // This is a placeholder URL for where your actual server-side scraping code would be hosted
   const scrapingServiceUrl = ${WEB.value};
   const fullUrl = `https://www.reece.com.au/search/?query=${sku.value}`;
