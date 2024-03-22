@@ -6,9 +6,9 @@
   "author": {
     "name": "Your Name",
     "email": "you@example.com",
-    "url": "https://7040141e-c2b8-4785-b033-06fd4df96d1d-00-18eqht5p9dli8.riker.replit.dev/"
+    "url": "https://dynamic44.github.io/URL/"
   },
-  "documentationUrl": "https://github.com/your-repo/your-plugin/README.md",
+  "documentationUrl": "https://github.com/Dynamic44/URL/README.md",
   "type": "column",
   "category": "text",
   "params": [
@@ -17,7 +17,14 @@
       "type": "string",
       "label": "SKU",
       "description": "The SKU to append to the base URL for searching."
+    },
+    {
+      "name": "web",
+      "type": "string",
+      "label": "WEB",
+      "description": "The website to search."
     }
+    
   ],
   "result": {
     "type": "object",
