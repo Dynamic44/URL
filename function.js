@@ -1,32 +1,21 @@
-window.function = async function(sku) {
-  // This is a placeholder URL for where your actual server-side scraping code would be hosted
-  const scrapingServiceUrl = ${WEB.value};
-  const fullUrl = `https://www.reece.com.au/search/?query=${sku.value}`;
-
-  try {
-    // Assuming you have an endpoint that does the scraping and returns JSON
-    const response = await fetch(scrapingServiceUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ url: fullUrl }),
-    });
-
-    if (!response.ok) throw new Error('Network response was not ok.');
-
-    const data = await response.json();
+window.function = function(sku, web) {
+  // Ensure both parameters are provided
+  if (!sku || !web) {
     return {
-      href: data.href,
-      productName: data.productName,
-      imageSrc: data.imageSrc,
-    };
-  } catch (error) {
-    console.error("Scraping failed:", error);
-    return {
+      searchUrl: "",
       href: "",
       productName: "",
       imageSrc: "",
     };
   }
+
+  const fullUrl = `${web.value}/search/?query=${sku.value}`;
+
+  // Return the constructed URL and placeholders for the intended data
+  return {
+    searchUrl: fullUrl,
+    href: "Placeholder for href - use external service to populate",
+    productName: "Placeholder for product name - use external service to populate",
+    imageSrc: "Placeholder for image source URL - use external service to populate",
+  };
 }
