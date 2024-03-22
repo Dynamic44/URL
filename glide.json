@@ -1,5 +1,5 @@
 {
-  "id": "com.example.skuurlconstructor",
+  "id": "com.thedynamicgroup.com.au.skuurlconstructor",
   "name": "SKU URL Constructor and Data Placeholder",
   "description": "Constructs a URL with an SKU and prepares placeholders for data extraction.",
   "version": "1.0.0",
@@ -9,8 +9,10 @@
     "url": "https://dynamic44.github.io/URL/"
   },
   "documentationUrl": "https://github.com/Dynamic44/URL/blob/main/readme.md",
-  "type": "column",
-  "category": "text",
+  "type": "data",
+  "category": "utilities",
+  "icon": "link",
+  "tags": ["web", "URL", "data extraction"],
   "params": [
     {
       "name": "sku",
@@ -21,18 +23,17 @@
     {
       "name": "web",
       "type": "string",
-      "label": "WEB",
-      "description": "The website to search."
+      "label": "Web",
+      "description": "The website URL to prepend to the SKU for searching."
     }
-    
   ],
   "result": {
     "type": "object",
-    "description": "The constructed search URL and placeholder data for extraction.",
+    "description": "The URL constructed from the website and SKU inputs, along with placeholders for potential data extraction.",
     "properties": {
       "searchUrl": {
         "type": "string",
-        "description": "The constructed search URL."
+        "description": "The fully constructed search URL."
       },
       "href": {
         "type": "string",
@@ -49,3 +50,4 @@
     }
   }
 }
+
