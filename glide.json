@@ -1,0 +1,44 @@
+{
+  "id": "com.example.skuurlconstructor",
+  "name": "SKU URL Constructor and Data Placeholder",
+  "description": "Constructs a URL with an SKU and prepares placeholders for data extraction.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Your Name",
+    "email": "you@example.com",
+    "url": "https://7040141e-c2b8-4785-b033-06fd4df96d1d-00-18eqht5p9dli8.riker.replit.dev/"
+  },
+  "documentationUrl": "https://github.com/your-repo/your-plugin/README.md",
+  "type": "column",
+  "category": "text",
+  "params": [
+    {
+      "name": "sku",
+      "type": "string",
+      "label": "SKU",
+      "description": "The SKU to append to the base URL for searching."
+    }
+  ],
+  "result": {
+    "type": "object",
+    "description": "The constructed search URL and placeholder data for extraction.",
+    "properties": {
+      "searchUrl": {
+        "type": "string",
+        "description": "The constructed search URL."
+      },
+      "href": {
+        "type": "string",
+        "description": "Placeholder for the href attribute value."
+      },
+      "productName": {
+        "type": "string",
+        "description": "Placeholder for the product name."
+      },
+      "imageSrc": {
+        "type": "string",
+        "description": "Placeholder for the image source URL."
+      }
+    }
+  }
+}
